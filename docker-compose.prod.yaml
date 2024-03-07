@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  spring-app:
+    build:
+      context: .
+      args:
+        SPRING_PROFILE: "prod"
+    image: keim2152/spring-app/prod
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      - postgres-db
+  postgres-db:
+    image: postgres:15.3-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: carlistings
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:

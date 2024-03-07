@@ -1,0 +1,2 @@
+rootProject.name = 'keim2152-idde'
+include 'desktop', 'backend', 'web', 'spring'

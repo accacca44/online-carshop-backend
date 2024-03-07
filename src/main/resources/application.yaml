@@ -1,0 +1,10 @@
+spring.profiles.active: dev
+spring.jpa.show-sql: true
+
+app.jwtSecret: secretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecret
+app.jwtExpiration: 86400000
+
+clean: false
+backup: false
+statistics: false
+carImgDir: src/main/resources/assets/images

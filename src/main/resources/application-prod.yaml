@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: user
+    password: password
+    url: jdbc:postgresql://postgres-db:5432/carlistings
+    hikari:
+      enabled: true
+      maximum-pool-size: 5
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+logging:
+  level:
+    root: info
